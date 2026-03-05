@@ -11,6 +11,8 @@
     padding: 0;
 }
 
+/*Header*/
+
 body {
     max-width: 1440px;
     margin: 0 auto;
@@ -179,6 +181,149 @@ h1 {
 .border-info i {
     color: var(--color-blue);
 }
+
+/*Main*/
+
+main {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.hebergements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex: 2;
+    background-color: var(--color-grey);
+    border-radius: 20px;
+    gap: 30px;
+    padding: 30px;
+}
+
+
+.hebergements h2 {
+    font-size: 22px;
+    grid-column: 1 / -1;
+}
+
+.card {
+    border-radius: 20px;
+    background-color: white;
+}
+
+.hebergements .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.hebergements .card img {
+    height: 124px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.hebergements .card a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.hebergements .pop-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 15px;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fa-solid.fa-star {
+    color: var(--color-blue);
+}
+
+.fa-regular.fa-star {
+    color: var(--color-grey);
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.populaires {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    background-color: var(--color-grey);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.populaires h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+
+.populaires i {
+    color: var(--color-blue);
+}
+
+.populaires .card {
+    overflow: hidden;
+}
+
+.populaires .card h3 {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.populaires .card p {
+    font-size: 14px;
+}   
+
+.populaires .card a {
+    display: flex;
+    flex-direction: row;
+    height: 146px;
+    width: 100%;
+}
+
+.populaires .card img {
+    width: 123px;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+}
+
+.card-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activites {
+    width: 100%;
+}
+
+.afficher-plus {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+
 
 /* mobile */
 @media(max-width: 768px) {
