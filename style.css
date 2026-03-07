@@ -362,6 +362,7 @@ footer {
     display: flex;
     flex-direction: row;
     background-color: var(--color-grey);
+    margin-top: 35px;
 }
 
 footer .footer-section {
@@ -391,9 +392,46 @@ footer .footer-section ul {
     gap: 15px;
 }
 
-/* mobile */
-@media(max-width: 768px) {
-    nav {
-        font-size: 70px;
+/* Tablette */
+@media(max-width: 1024px) {
+     main {
+        flex-direction: column;
+    }
+
+    .hebergements .card {
+        padding-bottom: 15px;
+    }
+
+     .populaires .card a {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .populaires .card img {
+        width: 33%;
+        height: 146px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .populaires {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .populaires h2 {
+        width: 100%;
+    }
+
+    .populaires .card {
+        flex: 1;
+    }
+
+    .activites .card img {
+        height: 200px;
+    }
+
+    .activites .card {
+        width: 100%;
+        height: 270px;
     }
 }
