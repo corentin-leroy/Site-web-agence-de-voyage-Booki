@@ -33,6 +33,7 @@ nav {
 
 nav img {
     padding-top:30px;
+    margin-left: -30px;
 }
 
 nav ul {
@@ -140,10 +141,12 @@ h1 {
 
 .buttons-filters i {
     color: var(--color-blue);
+    margin-right: 10px;
 }
 
+
 .button-economique {
-    width: 173px;
+    width: 174px;
 }
 
 .button-familial {
@@ -277,6 +280,10 @@ main {
     font-size: 22px;
 }
 
+.populaires img {
+    margin-right: 5px;
+}
+
 .populaires i {
     color: var(--color-blue);
 }
@@ -348,9 +355,18 @@ main {
     flex-direction: column;
 }
 
+.activites .card a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .activites .card h3 {
     padding: 15px 19px 20px 19px;
     font-size: 16px;
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .activites .card img {
@@ -411,7 +427,6 @@ footer .footer-section ul {
     .populaires .card img {
         width: 33%;
         height: 146px;
-        border-radius: 20px 20px 0 0;
     }
 
     .populaires {
@@ -454,6 +469,7 @@ footer .footer-section ul {
 
     nav img {
         padding-top: 0;
+        margin-left: 0;
     }
 
     nav ul {
@@ -518,6 +534,11 @@ footer .footer-section ul {
 
     .buttons-filters button {
         width: calc(50% - 5px);
+        font-size: 14px;
+    }
+
+    .buttons-filters button {
+        font-size: 16px;
     }
 
     .filters .buttons-filters {
@@ -525,6 +546,11 @@ footer .footer-section ul {
         flex-wrap: wrap;
         column-gap: 10px;
         row-gap: 20px;
+    }
+
+    .filters .buttons-filters button {
+        display: flex;
+        align-items: center;
     }
 
     .hebergements, .populaires, .activites {
