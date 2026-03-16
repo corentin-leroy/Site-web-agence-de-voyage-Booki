@@ -1,81 +1,88 @@
+/* ==================== VARIABLES ==================== */
 :root {
-    --color-blue: #0065FC;
-    --color-blue-light: #DEEBFF;
-    --color-grey: #F2F2F2;
+    --color-blue: #0065FC;        /* Couleur principale bleue */
+    --color-blue-light: #DEEBFF;  /* Bleu clair pour les hover */
+    --color-grey: #F2F2F2;        /* Gris pour les fonds */
 }
 
+/* ==================== RESET ==================== */
 * {
-    font-family: 'Raleway', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    font-family: 'Raleway', sans-serif; /* Police globale du site */
+    box-sizing: border-box;             /* Padding inclus dans la largeur */
+    margin: 0;                          /* Supprime les marges par défaut */
+    padding: 0;                         /* Supprime les paddings par défaut */
 }
 
-/*Header*/
-
+/* ==================== BODY ==================== */
 body {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 50px;
+    max-width: 1440px;  /* Largeur maximale du site */
+    margin: 0 auto;     /* Centre le contenu horizontalement */
+    padding: 0 50px;    /* Marges latérales de 50px */
 }
+
+/* ==================== HEADER ==================== */
 
 header p {
-    font-size: 16px;
+    font-size: 16px; /* Taille du sous-titre */
 }
 
-
+/* Navigation */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Logo à gauche, liens à droite */
     align-items: center;
     padding-bottom: 30px;
 }
 
 nav img {
-    height: 19px;
-    width: auto;
+    height: 19px;    /* Hauteur fixe du logo */
+    width: auto;     /* Largeur automatique pour garder les proportions */
     margin-top: 30px;
 }
 
 nav ul {
     display: flex;
-    list-style: none;
-    gap: 68px;
+    list-style: none; /* Supprime les puces */
+    gap: 68px;        /* Espace entre les liens */
 }
 
 nav ul li a {
-    text-decoration: none;
+    text-decoration: none; /* Supprime le soulignement */
     color: black;
     padding-top: 14px;
 }
 
+/* Effet hover sur les liens de navigation */
 nav ul li a:hover {
-    border-top: 2px solid var(--color-blue);
+    border-top: 2px solid var(--color-blue); /* Bordure bleue en haut au survol */
     color: var(--color-blue);
 }
 
+/* Titre principal */
 h1 {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
+/* Barre de recherche */
 .search form {
     height: 49px;
     display: flex;
     align-items: center;
     border: 1px solid var(--color-grey);
     border-radius: 15px;
-    width: fit-content;
+    width: fit-content;  /* Largeur adaptée au contenu */
     margin-top: 35px;
     margin-bottom: 35px;
-    overflow: hidden;
+    overflow: hidden;    /* Cache les débordements du border-radius */
 }
 
-.search button i {
-    display: none;
+.search form input {
+    height: 48px;
 }
 
+/* Cache le label visuellement mais le garde accessible aux lecteurs d'écran */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -89,21 +96,23 @@ h1 {
     color: black;
 }
 
+/* Icône de localisation dans le formulaire */
 .search form i {
     width: 49px;
     height: 49px;
     padding: 15px;
     background-color: var(--color-grey);
-    border-radius: 15px 0 0 15px;
+    border-radius: 15px 0 0 15px; /* Arrondi uniquement à gauche */
 }
 
 .search input {
     border: none;
-    outline: none;
+    outline: none; /* Supprime le contour focus par défaut */
     font-size: 16px;
     padding: 15px;
 }
 
+/* Bouton Rechercher */
 .search button {
     width: 132px;
     height: 49px;
@@ -111,12 +120,18 @@ h1 {
     font-size: 18px;
     color: white;
     border: none;
-    border-radius: 0 15px 15px 0;
+    border-radius: 0 15px 15px 0; /* Arrondi uniquement à droite */
     padding: 15px 20px;
     font-weight: bold;
     cursor: pointer;
 }
 
+/* Cache l'icône loupe sur desktop */
+.search button i {
+    display: none;
+}
+
+/* Section filtres */
 .filters {
     display: flex;
     gap: 15px;
@@ -128,7 +143,7 @@ h1 {
     font-size: 18px;
 }
 
-
+/* Boutons filtres */
 .buttons-filters button {
     border: 2px solid var(--color-grey);
     border-radius: 25px;
@@ -136,37 +151,29 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     height: 50px;
-    padding: 4px 19px 4px 19px;
+    padding: 4px 19px;
     background-color: white;
 }
 
+/* Icônes des boutons filtres en bleu */
 .buttons-filters i {
     color: var(--color-blue);
     margin-right: 10px;
 }
 
+/* Largeurs spécifiques de chaque bouton filtre */
+.button-economique { width: 174px; }
+.button-familial   { width: 134px; }
+.button-romantique { width: 170px; }
+.button-pepites    { width: 167px; }
 
-.button-economique {
-    width: 174px;
-}
-
-.button-familial {
-    width: 134px;
-}
-
-.button-romantique {
-    width: 170px;
-}
-
-.button-pepites {
-    width: 167px;
-}
-
+/* Effet hover sur les filtres */
 .buttons-filters button:hover {
     background-color: var(--color-blue-light);
     border-color: var(--color-blue);
 }
 
+/* Section info */
 .info {
     display: flex;
     gap: 10px;
@@ -174,6 +181,7 @@ h1 {
     margin-bottom: 35px;
 }
 
+/* Cercle autour de l'icône info */
 .border-info {
     border-radius: 50px;
     border: 1px solid var(--color-grey);
@@ -188,36 +196,38 @@ h1 {
     color: var(--color-blue);
 }
 
-/*Main*/
+/* ==================== MAIN ==================== */
 
 main {
     display: flex;
     gap: 35px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permet le passage à la ligne sur petits écrans */
 }
 
+/* Section hébergements - grille 3 colonnes */
 .hebergements {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    flex: 2;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    flex: 2;           /* Prend 2/3 de l'espace disponible */
     background-color: var(--color-grey);
     border-radius: 20px;
     gap: 30px;
     padding: 30px;
 }
 
-
 .hebergements h2 {
     font-size: 22px;
-    grid-column: 1 / -1;
+    grid-column: 1 / -1; /* Le titre s'étend sur toute la largeur de la grille */
 }
 
+/* Style commun à toutes les cards */
 .card {
     border-radius: 20px;
     background-color: white;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1); /* Ombre subtile */
 }
 
+/* Cards hébergements en colonne */
 .hebergements .card {
     display: flex;
     flex-direction: column;
@@ -226,7 +236,7 @@ main {
 .hebergements .card img {
     height: 124px;
     width: 100%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0; /* Arrondi uniquement en haut */
 }
 
 .hebergements .card a {
@@ -235,6 +245,7 @@ main {
     height: 100%;
 }
 
+/* Conteneur du texte dans les cards hébergements */
 .hebergements .pop-card {
     display: flex;
     flex-direction: column;
@@ -242,6 +253,7 @@ main {
     padding-left: 15px;
 }
 
+/* Style commun aux liens des cards */
 .card a {
     text-decoration: none;
     color: black;
@@ -252,10 +264,12 @@ main {
     font-weight: bold;
 }
 
+/* Étoiles pleines en bleu */
 .fa-solid.fa-star {
     color: var(--color-blue);
 }
 
+/* Étoiles vides en gris */
 .fa-solid.fa-star.fa-star-empty {
     color: var(--color-grey);
 }
@@ -264,16 +278,18 @@ main {
     font-size: 14px;
 }
 
+/* Section populaires */
 .populaires {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    flex: 1;
+    flex: 1;           /* Prend 1/3 de l'espace disponible */
     background-color: var(--color-grey);
     border-radius: 20px;
     padding: 30px;
 }
 
+/* Titre avec icône à droite */
 .populaires h2 {
     display: flex;
     justify-content: space-between;
@@ -281,16 +297,12 @@ main {
     font-size: 22px;
 }
 
-.populaires img {
-    margin-right: 5px;
-}
-
 .populaires i {
     color: var(--color-blue);
 }
 
 .populaires .card {
-    overflow: hidden;
+    overflow: hidden; /* Cache les débordements du border-radius */
 }
 
 .populaires .card h3 {
@@ -301,8 +313,9 @@ main {
 
 .populaires .card p {
     font-size: 14px;
-}   
+}
 
+/* Cards populaires en ligne - image à gauche, texte à droite */
 .populaires .card a {
     display: flex;
     flex-direction: row;
@@ -313,16 +326,18 @@ main {
 .populaires .card img {
     width: 123px;
     height: 100%;
-    border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px; /* Arrondi uniquement à gauche */
 }
 
+/* Conteneur du texte dans les cards populaires */
 .card-info {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* Titre en haut, étoiles en bas */
 }
 
+/* Lien Afficher plus */
 .afficher-plus {
     font-size: 18px;
     font-weight: bold;
@@ -330,6 +345,7 @@ main {
     color: black;
 }
 
+/* Section activités */
 .activites {
     width: 100%;
     display: flex;
@@ -340,6 +356,7 @@ main {
     padding: 30px;
 }
 
+/* Conteneur des cards activités en ligne */
 .activites .card-activites {
     display: flex;
     flex-direction: row;
@@ -347,6 +364,7 @@ main {
     border-radius: 20px;
 }
 
+/* Cards activités avec grande image */
 .activites .card {
     width: 100%;
     height: 439px;
@@ -370,11 +388,14 @@ main {
     align-items: center;
 }
 
+/* Image qui prend tout l'espace disponible */
 .activites .card img {
     width: 100%;
     flex: 1;
     border-radius: 20px 20px 0 0;
 }
+
+/* ==================== FOOTER ==================== */
 
 footer {
     display: flex;
@@ -383,12 +404,13 @@ footer {
     margin-top: 35px;
 }
 
+/* Colonnes du footer */
 footer .footer-section {
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 30px;
-    flex: 1;
+    flex: 1; /* Chaque colonne prend un tiers de la largeur */
 }
 
 footer .footer-section h3 {
@@ -402,7 +424,6 @@ footer .footer-section li a {
     color: black;
 }
 
-
 footer .footer-section ul {
     list-style: none;
     display: flex;
@@ -410,9 +431,11 @@ footer .footer-section ul {
     gap: 15px;
 }
 
-/* Tablette */
+/* ==================== TABLETTE (max 1024px) ==================== */
 @media(max-width: 1024px) {
-     main {
+
+    /* Sections en colonne */
+    main {
         flex-direction: column;
     }
 
@@ -420,7 +443,8 @@ footer .footer-section ul {
         padding-bottom: 15px;
     }
 
-     .populaires .card a {
+    /* Cards populaires en ligne sur tablette */
+    .populaires .card a {
         flex-direction: row;
         height: auto;
     }
@@ -430,19 +454,21 @@ footer .footer-section ul {
         height: 146px;
     }
 
+    /* Section populaires en grille 3 colonnes sur tablette */
     .populaires {
         flex-direction: row;
         flex-wrap: wrap;
     }
 
     .populaires h2 {
-        width: 100%;
+        width: 100%; /* Titre sur toute la largeur */
     }
 
     .populaires .card {
         flex: 1;
     }
 
+    /* Réduction de la hauteur des cards activités */
     .activites .card img {
         height: 200px;
     }
@@ -453,14 +479,15 @@ footer .footer-section ul {
     }
 }
 
-/* Mobile */
-
+/* ==================== MOBILE (max 768px) ==================== */
 @media(max-width: 768px) {
 
+    /* Réduction des marges latérales */
     body {
         padding: 0 20px;
     }
 
+    /* Navigation en colonne avec logo centré */
     nav {
         flex-direction: column;
         align-items: center;
@@ -473,6 +500,7 @@ footer .footer-section ul {
         margin-left: 0;
     }
 
+    /* Liens de navigation sur toute la largeur */
     nav ul {
         gap: 0;
         width: 100vw;
@@ -492,20 +520,24 @@ footer .footer-section ul {
         width: 100%;
     }
 
+    /* Bordure bleue en bas au survol sur mobile */
     nav ul li a:hover {
-        border-top :none ;
+        border-top: none;
         border-bottom: 2px solid var(--color-blue);
         color: var(--color-blue);
     }
 
+    /* Barre de recherche pleine largeur */
     .search form {
         width: 100%;
     }
 
+    /* Cache le texte "Rechercher" sur mobile */
     .search-text {
         display: none;
     }
 
+    /* Bouton rechercher réduit à l'icône loupe */
     .search button {
         width: 49px;
         height: 49px;
@@ -516,16 +548,19 @@ footer .footer-section ul {
         align-items: center;
     }
 
+    /* Affiche l'icône loupe sur mobile */
     .search .fa-magnifying-glass {
         display: block;
         border-radius: 15px;
         background-color: var(--color-blue);
     }
 
+    /* Input prend tout l'espace disponible */
     .search input {
         flex: 1;
     }
 
+    /* Filtres en colonne sur mobile */
     .filters {
         display: flex;
         flex-direction: column;
@@ -533,6 +568,7 @@ footer .footer-section ul {
         gap: 20px;
     }
 
+    /* Boutons filtres sur 2 colonnes */
     .buttons-filters button {
         width: calc(50% - 5px);
         font-size: 16px;
@@ -550,6 +586,7 @@ footer .footer-section ul {
         align-items: center;
     }
 
+    /* Sections pleine largeur sans border-radius */
     .hebergements, .populaires, .activites {
         margin-left: -20px;
         margin-right: -20px;
@@ -557,17 +594,20 @@ footer .footer-section ul {
         border-radius: 0;
     }
 
+    /* Section populaires avant hébergements sur mobile */
     .populaires {
         order: -1;
         display: flex;
         flex-direction: column;
     }
 
+    /* Hébergements fond blanc sur mobile */
     .hebergements {
         background-color: white;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* 1 colonne sur mobile */
     }
 
+    /* Activités sans marges ni padding latéral */
     .activites {
         margin-left: 0;
         margin-right: 0;
@@ -575,6 +615,7 @@ footer .footer-section ul {
         padding-right: 0;
     }
 
+    /* Cards activités en colonne sur mobile */
     .activites .card-activites {
         display: flex;
         flex-direction: column;
@@ -593,11 +634,11 @@ footer .footer-section ul {
         flex: none;
     }
 
+    /* Footer en colonne sur mobile */
     footer {
         display: flex;
         flex-direction: column;
         margin-left: -20px;
         margin-right: -20px;
     }
-
 }
