@@ -449,6 +449,7 @@ footer .footer-section ul {
 
     /* Cards populaires en ligne sur tablette */
     .populaires .card a {
+        padding: 0 0 0 5px ;
         flex-direction: row;
         height: auto;
     }
@@ -471,8 +472,9 @@ footer .footer-section ul {
     }
 
     .populaires .card {
-        flex: 1;
-        min-width: 200px; /* Empêche les cards de devenir trop étroites */
+        flex: none; /* désactive le comportement flex qui étire les cards */
+        width: 260px; /* largeur fixe */
+        min-width: 260px; /* ne peut pas être plus petite */
     }
 
     /* Réduction de la hauteur des cards activités */
