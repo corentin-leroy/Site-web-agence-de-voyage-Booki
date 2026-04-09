@@ -493,6 +493,7 @@ footer .footer-section ul {
     /* Réduction des marges latérales */
     body {
         padding: 0 20px;
+        overflow-x: hidden;
     }
 
     /* Navigation en colonne avec logo centré */
@@ -511,8 +512,7 @@ footer .footer-section ul {
     /* Liens de navigation sur toute la largeur */
     nav ul {
         gap: 0;
-        width: calc(100% + 40px); /* compense le padding: 0 20px du body */
-        margin-left: -20px;
+        width: 100vw;
         justify-content: space-around;
     }
 
